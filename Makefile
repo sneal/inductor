@@ -19,6 +19,7 @@ test: deps
 deps:
 	@echo "$(OK_COLOR)==> Installing dependencies$(NO_COLOR)"
 	@go get -d -v -t ./...
+	@go get code.google.com/p/go.tools/cmd/cover
 
 release: clean-pkg deps
 	@echo "$(OK_COLOR)==> Releasing$(NO_COLOR)"
